@@ -9,7 +9,7 @@ namespace WindowsFormsApp1.Helper
     
     public class Constain
     {
-        public static String connectingString = @"Data Source=DESKTOP-DQ1BOMO\SQLEXPRESS;Initial Catalog=Foody;Integrated Security=True";
+        public static String connectingString = @"Data Source=DESKTOP-Q4KULUH\SQLEXPRESS;Initial Catalog=btl_nhapmon;Integrated Security=True";
         public enum Role
         {
             DANG_NHAP,

@@ -10,3 +10,16 @@ D:\Documents\qly_nhahang_thanglong\WindowsFormsApp1\bin\Debug\WindowsFormsApp1.e
 D:\Documents\qly_nhahang_thanglong\WindowsFormsApp1\bin\Debug\WindowsFormsApp1.pdb
 D:\Documents\qly_nhahang_thanglong\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.exe
 D:\Documents\qly_nhahang_thanglong\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.pdb
+C:\Users\ADMIN\Desktop\BTL_NMCNPM\qly_nhahang_thanglong\WindowsFormsApp1\bin\Debug\WindowsFormsApp1.exe.config
+C:\Users\ADMIN\Desktop\BTL_NMCNPM\qly_nhahang_thanglong\WindowsFormsApp1\bin\Debug\WindowsFormsApp1.exe
+C:\Users\ADMIN\Desktop\BTL_NMCNPM\qly_nhahang_thanglong\WindowsFormsApp1\bin\Debug\WindowsFormsApp1.pdb
+C:\Users\ADMIN\Desktop\BTL_NMCNPM\qly_nhahang_thanglong\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.csproj.AssemblyReference.cache
+C:\Users\ADMIN\Desktop\BTL_NMCNPM\qly_nhahang_thanglong\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.DangNhap.resources
+C:\Users\ADMIN\Desktop\BTL_NMCNPM\qly_nhahang_thanglong\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.DoiMK.resources
+C:\Users\ADMIN\Desktop\BTL_NMCNPM\qly_nhahang_thanglong\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.Module.Main.resources
+C:\Users\ADMIN\Desktop\BTL_NMCNPM\qly_nhahang_thanglong\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.Properties.Resources.resources
+C:\Users\ADMIN\Desktop\BTL_NMCNPM\qly_nhahang_thanglong\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.csproj.GenerateResource.cache
+C:\Users\ADMIN\Desktop\BTL_NMCNPM\qly_nhahang_thanglong\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.csproj.CoreCompileInputs.cache
+C:\Users\ADMIN\Desktop\BTL_NMCNPM\qly_nhahang_thanglong\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.exe
+C:\Users\ADMIN\Desktop\BTL_NMCNPM\qly_nhahang_thanglong\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.pdb
+C:\Users\ADMIN\Desktop\BTL_NMCNPM\qly_nhahang_thanglong\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.Module.Foodview.resources
