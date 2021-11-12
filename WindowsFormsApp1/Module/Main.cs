@@ -7,13 +7,17 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using WindowsFormsApp1.Model;
 
 namespace WindowsFormsApp1.Module
 {
     public partial class Main : Form
     {
-        public Main()
+        User user { get; set; }
+
+        public Main(User user)
         {
+            this.user = user;
             InitializeComponent();
         }
     }
