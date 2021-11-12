@@ -20,5 +20,23 @@ namespace WindowsFormsApp1.Module
             this.user = user;
             InitializeComponent();
         }
+
+        private void càiĐặtToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void đăngXuấtToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            new DangNhap().Show();
+        }
+
+        private void danhSáchNhânViênToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Hosocanhan hosocanhan = new Hosocanhan(user);
+            hosocanhan.MdiParent  = this;
+            hosocanhan.Show();
+        }
     }
 }

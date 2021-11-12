@@ -12,8 +12,8 @@ namespace WindowsFormsApp1.Service
 {
     public class UserService
     {
-        SqlConnection cnn = new SqlConnection(Constain.connectingString);
-        public DataTable getListUser()
+        static SqlConnection cnn = new SqlConnection(Constain.connectingString);
+        public static DataTable getListUser()
         {
             DataTable data = new DataTable();
             using (SqlCommand cmd = new SqlCommand("selectAllUser", cnn))
@@ -32,7 +32,7 @@ namespace WindowsFormsApp1.Service
             }
             return data;
         }
-        public bool editUser(User user)
+        public static bool editUser(User user)
         {
             using (SqlCommand cmd = new SqlCommand("suanhanvien", cnn))
             {  
@@ -58,13 +58,16 @@ namespace WindowsFormsApp1.Service
         }
 
 
-        public DataTable searchNhanVien(string hoten, DateTime sinhnhat, string sdt, Boolean gioitinh, Boolean havegt, Boolean havesn)
+        public static DataTable searchNhanVien(string hoten, DateTime sinhnhat, string sdt, Boolean gioitinh, Boolean havegt, Boolean havesn, string CMND, string diachi, string email)
         {
             DataTable table = new DataTable();
             using (SqlCommand cmd = new SqlCommand("timnhanvien", cnn))
             {
                 cmd.CommandType = CommandType.StoredProcedure;
                 cmd.Parameters.AddWithValue("@sFullName", hoten);
+                cmd.Parameters.AddWithValue("@sPassportNumber", CMND);
+                cmd.Parameters.AddWithValue("@sAddress", diachi);
+                cmd.Parameters.AddWithValue("@email", email);
                 if (havesn)
                     cmd.Parameters.AddWithValue("@dDateOfBirth", sinhnhat);
                 else
@@ -85,7 +88,7 @@ namespace WindowsFormsApp1.Service
             return table;
         }
 
-        public bool addUser(User user)
+        public static bool addUser(User user)
         {
             using (SqlCommand cmd = new SqlCommand("themnhanvien", cnn))
             {
@@ -129,7 +132,7 @@ namespace WindowsFormsApp1.Service
             return data;
         }
 
-        public bool deleteUser(User user)
+        public static bool deleteUser(User user)
         {
             using (SqlCommand cmd = new SqlCommand("xoaNhanVien", cnn))
             {

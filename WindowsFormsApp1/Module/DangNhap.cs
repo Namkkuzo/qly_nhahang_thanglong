@@ -46,7 +46,7 @@ namespace WindowsFormsApp1
                 }
                 else
                 {
-                    errorProvider1.SetError(txtTaiKhoan, result["message"]);
+                    MessageBox.Show(result["message"]);
                     
                 }
             }

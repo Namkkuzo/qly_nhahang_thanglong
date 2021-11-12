@@ -61,11 +61,35 @@
     <Compile Include="Module\DoiMK.Designer.cs">
       <DependentUpon>DoiMK.cs</DependentUpon>
     </Compile>
+    <Compile Include="Module\Hosocanhan.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Module\Hosocanhan.Designer.cs">
+      <DependentUpon>Hosocanhan.cs</DependentUpon>
+    </Compile>
     <Compile Include="Module\Main.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Module\Main.Designer.cs">
       <DependentUpon>Main.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Module\ThemNhanVien.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Module\ThemNhanVien.Designer.cs">
+      <DependentUpon>ThemNhanVien.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Module\ThongTincanhan.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Module\ThongTincanhan.designer.cs">
+      <DependentUpon>ThongTincanhan.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Module\TimNhanVien.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Module\TimNhanVien.designer.cs">
+      <DependentUpon>TimNhanVien.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -77,8 +101,20 @@
     <EmbeddedResource Include="Module\DoiMK.resx">
       <DependentUpon>DoiMK.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Module\Hosocanhan.resx">
+      <DependentUpon>Hosocanhan.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Module\Main.resx">
       <DependentUpon>Main.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Module\ThemNhanVien.resx">
+      <DependentUpon>ThemNhanVien.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Module\ThongTincanhan.resx">
+      <DependentUpon>ThongTincanhan.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Module\TimNhanVien.resx">
+      <DependentUpon>TimNhanVien.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
