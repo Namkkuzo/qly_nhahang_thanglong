@@ -35,13 +35,17 @@ namespace WindowsFormsApp1.Service
         public static bool editUser(User user)
         {
             using (SqlCommand cmd = new SqlCommand("suanhanvien", cnn))
-            {  
-                cmd.CommandType = CommandType.StoredProcedure;
+            {
                 cmd.Parameters.AddWithValue("@id", user.id);
                 cmd.Parameters.AddWithValue("@sFullName", user.fullName);
                 cmd.Parameters.AddWithValue("@dDateOfBirth", user.dateOfBirth);
                 cmd.Parameters.AddWithValue("@bGender", user.gender);
                 cmd.Parameters.AddWithValue("@sPhone", user.phoneNumber);
+                cmd.Parameters.AddWithValue("@sPassportNumber", user.passportNumber);
+                cmd.Parameters.AddWithValue("@sAddress", user.address);
+                cmd.Parameters.AddWithValue("@email", user.email);
+                cmd.CommandType = CommandType.StoredProcedure;
+                
                 if (cnn.State == ConnectionState.Closed)
                     cnn.Open();
                 try
@@ -97,6 +101,10 @@ namespace WindowsFormsApp1.Service
                 cmd.Parameters.AddWithValue("@dDateOfBirth", user.dateOfBirth);
                 cmd.Parameters.AddWithValue("@bGender", user.gender);
                 cmd.Parameters.AddWithValue("@sPhone", user.phoneNumber);
+                cmd.Parameters.AddWithValue("@pass", user.phoneNumber);
+                cmd.Parameters.AddWithValue("@sPassportNumber", user.passportNumber);
+                cmd.Parameters.AddWithValue("@sAddress", user.address);
+                cmd.Parameters.AddWithValue("@email", user.email);
                 if (cnn.State == ConnectionState.Closed)
                     cnn.Open();
                 try

@@ -21,5 +21,6 @@ namespace WindowsFormsApp1.Model
         public String address { get; set; }
         public Int32 gender { get; set; }
         public String email { get; set; }
+        public String password { get; set; }
     }
 }

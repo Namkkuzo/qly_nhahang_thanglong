@@ -100,6 +100,8 @@ namespace WindowsFormsApp1
 
         private void btnsua_Click(object sender, EventArgs e)
         {
+
+            
             User nhanVienInView = new User();
 
             nhanVienInView.id = Convert.ToInt32( txtmaNV.Text);
@@ -110,7 +112,11 @@ namespace WindowsFormsApp1
             nhanVienInView.gender = gt;
             nhanVienInView.dateOfBirth = dtNgS.Value;
             nhanVienInView.phoneNumber = txtSDT.Text;
-
+            nhanVienInView.address = txtAddress.Text;
+            nhanVienInView.email = txtEmail.Text;
+            nhanVienInView.passportNumber = txtCMND.Text;
+            SuaNhanVien themNhanVien = new SuaNhanVien(nhanVienInView);
+            themNhanVien.ShowDialog();
             if (UserService.editUser(nhanVienInView))
             {
                 MessageBox.Show("Đã có lỗi xảy ra");
