@@ -48,6 +48,7 @@
   <ItemGroup>
     <Compile Include="Helper\Constain.cs" />
     <Compile Include="Helper\Extention.cs" />
+    <Compile Include="Model\Food.cs" />
     <Compile Include="Model\User.cs" />
     <Compile Include="Module\DangNhap.cs">
       <SubType>Form</SubType>
@@ -61,6 +62,12 @@
     <Compile Include="Module\DoiMK.Designer.cs">
       <DependentUpon>DoiMK.cs</DependentUpon>
     </Compile>
+    <Compile Include="Module\Foodview.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Module\Foodview.Designer.cs">
+      <DependentUpon>Foodview.cs</DependentUpon>
+    </Compile>
     <Compile Include="Module\Main.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -69,6 +76,7 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Service\FoodService.cs" />
     <Compile Include="Service\LoginService.cs" />
     <Compile Include="Service\UserService.cs" />
     <EmbeddedResource Include="Module\DangNhap.resx">
@@ -76,6 +84,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Module\DoiMK.resx">
       <DependentUpon>DoiMK.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Module\Foodview.resx">
+      <DependentUpon>Foodview.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Module\Main.resx">
       <DependentUpon>Main.cs</DependentUpon>
