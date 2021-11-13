@@ -46,15 +46,22 @@ namespace WindowsFormsApp1.Module
             this.ngs = new System.Windows.Forms.Label();
             this.gt = new System.Windows.Forms.Label();
             this.ht = new System.Windows.Forms.Label();
-            this.btnThemQuyen = new System.Windows.Forms.Button();
             this.txtpass = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.dataGridView2 = new System.Windows.Forms.DataGridView();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
+            this.sName = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.quyen = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
             this.SuspendLayout();
             // 
             // btnHuy
             // 
             this.btnHuy.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btnHuy.Location = new System.Drawing.Point(519, 396);
+            this.btnHuy.Location = new System.Drawing.Point(860, 651);
             this.btnHuy.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnHuy.Name = "btnHuy";
             this.btnHuy.Size = new System.Drawing.Size(83, 26);
@@ -66,7 +73,7 @@ namespace WindowsFormsApp1.Module
             // btnsua
             // 
             this.btnsua.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btnsua.Location = new System.Drawing.Point(403, 396);
+            this.btnsua.Location = new System.Drawing.Point(737, 651);
             this.btnsua.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnsua.Name = "btnsua";
             this.btnsua.Size = new System.Drawing.Size(88, 26);
@@ -226,18 +233,6 @@ namespace WindowsFormsApp1.Module
             this.ht.Text = "Họ tên";
             this.ht.Click += new System.EventHandler(this.ht_Click);
             // 
-            // btnThemQuyen
-            // 
-            this.btnThemQuyen.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btnThemQuyen.Location = new System.Drawing.Point(244, 396);
-            this.btnThemQuyen.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.btnThemQuyen.Name = "btnThemQuyen";
-            this.btnThemQuyen.Size = new System.Drawing.Size(126, 26);
-            this.btnThemQuyen.TabIndex = 60;
-            this.btnThemQuyen.Text = "Thêm quyền";
-            this.btnThemQuyen.UseVisualStyleBackColor = false;
-            this.btnThemQuyen.Click += new System.EventHandler(this.btnThemQuyen_Click);
-            // 
             // txtpass
             // 
             this.txtpass.Location = new System.Drawing.Point(259, 302);
@@ -258,14 +253,75 @@ namespace WindowsFormsApp1.Module
             this.label3.Text = "Mật khẩu";
             this.label3.Click += new System.EventHandler(this.label3_Click);
             // 
+            // dataGridView1
+            // 
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.sName});
+            this.dataGridView1.Location = new System.Drawing.Point(147, 391);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.RowHeadersWidth = 51;
+            this.dataGridView1.RowTemplate.Height = 24;
+            this.dataGridView1.Size = new System.Drawing.Size(351, 211);
+            this.dataGridView1.TabIndex = 63;
+            // 
+            // dataGridView2
+            // 
+            this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView2.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.quyen});
+            this.dataGridView2.Location = new System.Drawing.Point(549, 391);
+            this.dataGridView2.Name = "dataGridView2";
+            this.dataGridView2.RowHeadersWidth = 51;
+            this.dataGridView2.RowTemplate.Height = 24;
+            this.dataGridView2.Size = new System.Drawing.Size(370, 211);
+            this.dataGridView2.TabIndex = 64;
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(145, 354);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(210, 17);
+            this.label5.TabIndex = 65;
+            this.label5.Text = "Danh sách quyền đã được phân";
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(559, 354);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(149, 17);
+            this.label6.TabIndex = 66;
+            this.label6.Text = "Danh sách quyền k có";
+            // 
+            // sName
+            // 
+            this.sName.DataPropertyName = "sName";
+            this.sName.HeaderText = "Quyền";
+            this.sName.MinimumWidth = 6;
+            this.sName.Name = "sName";
+            this.sName.Width = 125;
+            // 
+            // quyen
+            // 
+            this.quyen.DataPropertyName = "sName";
+            this.quyen.HeaderText = "Quyền";
+            this.quyen.MinimumWidth = 6;
+            this.quyen.Name = "quyen";
+            this.quyen.Width = 125;
+            // 
             // ThemNhanVien
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(990, 608);
+            this.ClientSize = new System.Drawing.Size(1011, 697);
+            this.Controls.Add(this.label6);
+            this.Controls.Add(this.label5);
+            this.Controls.Add(this.dataGridView2);
+            this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.txtpass);
             this.Controls.Add(this.label3);
-            this.Controls.Add(this.btnThemQuyen);
             this.Controls.Add(this.txtAddress);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.txtCMND);
@@ -285,6 +341,8 @@ namespace WindowsFormsApp1.Module
             this.Controls.Add(this.btnsua);
             this.Name = "ThemNhanVien";
             this.Text = "ThemNhanVien";
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -308,8 +366,13 @@ namespace WindowsFormsApp1.Module
         private System.Windows.Forms.Label ngs;
         private System.Windows.Forms.Label gt;
         private System.Windows.Forms.Label ht;
-        private System.Windows.Forms.Button btnThemQuyen;
         private System.Windows.Forms.TextBox txtpass;
         private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn sName;
+        private System.Windows.Forms.DataGridView dataGridView2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn quyen;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label label6;
     }
 }

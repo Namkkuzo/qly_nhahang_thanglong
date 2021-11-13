@@ -45,5 +45,15 @@ namespace WindowsFormsApp1.Module
             hosocanhan.MdiParent = this;
             hosocanhan.Show();
         }
+
+        private void toolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void danhSáchHóaĐơnToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
