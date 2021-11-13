@@ -147,9 +147,13 @@ namespace WindowsFormsApp1.Module
 
         private void dgvFood_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            txtName.Text = dgvFood.CurrentRow.Cells["sName"].Value.ToString();
-            txtPrice.Text = dgvFood.CurrentRow.Cells["fPrice"].Value.ToString();
-            txtDescription.Text = dgvFood.CurrentRow.Cells["sDescription"].Value.ToString();
+            try
+            {
+                txtName.Text = dgvFood.CurrentRow.Cells["sName"].Value.ToString();
+                txtPrice.Text = dgvFood.CurrentRow.Cells["fPrice"].Value.ToString();
+                txtDescription.Text = dgvFood.CurrentRow.Cells["sDescription"].Value.ToString();
+            }
+            catch { }
         }
 
         private void dgvFood_CellContentClick(object sender, DataGridViewCellEventArgs e)

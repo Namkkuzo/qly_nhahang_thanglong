@@ -30,7 +30,7 @@ namespace WindowsFormsApp1.Service
                     da.Fill(table);
                     foreach (DataRow row in table.Rows)
                     {
-                        if (Constain.getRoleByString(row[1].ToString()) != null )
+                        if (Constain.getRoleByString(row[0].ToString().Trim()) != null )
                         listRole.Add(Constain.getRoleByString(row[1].ToString())?? Constain.Role.DANG_NHAP);
                     }   
                     
@@ -77,8 +77,16 @@ namespace WindowsFormsApp1.Service
                         // check pass ở đây , hash pass
                         if (PasswordHash.MD5Hash(password) == table.Rows[0]["sPassword"].ToString())
                         {
-                            result.Add("message", "đang nhập thành công");
-                            result.Add("user", user);
+                            if (user.listRole.Contains(Constain.Role.DANG_NHAP))
+                            {
+                                result.Add("message", "Bạn không có quyền đăng nhâp");
+                                result.Add("user", new User());
+                            }
+                            else
+                            {
+                                result.Add("message", "đang nhập thành công");
+                                result.Add("user", user);
+                            }
 
                         }
                         else
