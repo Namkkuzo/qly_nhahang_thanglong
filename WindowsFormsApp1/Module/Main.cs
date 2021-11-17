@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using WindowsFormsApp1.Model;
+using static WindowsFormsApp1.Helper.Constain;
 
 namespace WindowsFormsApp1.Module
 {
@@ -19,6 +20,7 @@ namespace WindowsFormsApp1.Module
         {
             this.user = user;
             InitializeComponent();
+            checkQuyen();
         }
 
         private void càiĐặtToolStripMenuItem_Click(object sender, EventArgs e)
@@ -54,6 +56,26 @@ namespace WindowsFormsApp1.Module
         private void danhSáchHóaĐơnToolStripMenuItem_Click(object sender, EventArgs e)
         {
 
+        }
+        
+        void checkQuyen ()
+        {
+            if (!user.listRole.Contains (Role.HR))
+            {
+                nhanvienitem.Visible = false;
+            }
+            if (!user.listRole.Contains(Role.NHA_BEP))
+            {
+                nhabemitem.Visible = false;
+            }
+            if (!user.listRole.Contains(Role.THU_NGAN))
+            {
+                orderitem.Visible = false;
+            }
+        }
+        private void Main_Load(object sender, EventArgs e)
+        {
+           
         }
     }
 }

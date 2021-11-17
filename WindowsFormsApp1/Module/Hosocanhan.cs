@@ -230,5 +230,10 @@ namespace WindowsFormsApp1
             ThemNhanVien themNhanVien = new ThemNhanVien();
             themNhanVien.ShowDialog();
         }
+
+        private void dtgNV_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
     }
 }

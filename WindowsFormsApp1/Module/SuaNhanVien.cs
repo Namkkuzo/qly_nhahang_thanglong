@@ -19,7 +19,7 @@ namespace WindowsFormsApp1.Module
         {
             this.user = user;
             InitializeComponent();
-            initView();
+            
         }
         void initView()
         {
@@ -30,6 +30,10 @@ namespace WindowsFormsApp1.Module
             txtSDT.Text = user.phoneNumber;
             cbbGt.Text = user.gender == 1 ? "Nữ" : "Nam";
             dtNgS.Value = user.dateOfBirth;
+            DataTable table = RoleService.getAllRole();
+            comboBox1.DataSource = table;
+            comboBox1.DisplayMember = "sName";
+            comboBox1.ValueMember = "Id";
 
         }
 
@@ -46,11 +50,25 @@ namespace WindowsFormsApp1.Module
             user.phoneNumber = txtSDT.Text;
 
             bool result = UserService.editUser(user);
+            bool resultRole = UserService.editRole(user.id, Convert.ToInt32(comboBox1.ValueMember));
+            if (result && resultRole)
+            {
+                MessageBox.Show("Thay đổi thành công");
+            }
+            else
+            {
+                MessageBox.Show("Thay đổi thất bại");
+            }
         }
 
         private void btnHuy_Click(object sender, EventArgs e)
         {
             this.Hide();
+        }
+
+        private void SuaNhanVien_Load(object sender, EventArgs e)
+        {
+            initView();
         }
     }
 }

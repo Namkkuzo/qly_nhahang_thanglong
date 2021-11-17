@@ -62,6 +62,30 @@ namespace WindowsFormsApp1.Service
         }
 
 
+        public static bool editRole(int  idUser, int idRole)
+        {
+            using (SqlCommand cmd = new SqlCommand("editrolluser", cnn))
+            {
+                cmd.Parameters.AddWithValue("@id", idUser);
+                cmd.Parameters.AddWithValue("@roll", idRole);
+                cmd.CommandType = CommandType.StoredProcedure;
+
+                if (cnn.State == ConnectionState.Closed)
+                    cnn.Open();
+                try
+                {
+                    cmd.ExecuteNonQuery();
+                    return true;
+                }
+                catch
+                {
+                    return false;
+                }
+                finally { cnn.Close(); }
+            }
+        }
+
+
         public static DataTable searchNhanVien(string hoten, DateTime sinhnhat, string sdt, Boolean gioitinh, Boolean havegt, Boolean havesn, string CMND, string diachi, string email)
         {
             DataTable table = new DataTable();

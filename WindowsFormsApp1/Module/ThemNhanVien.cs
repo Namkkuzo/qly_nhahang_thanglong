@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using WindowsFormsApp1.Model;
 using WindowsFormsApp1.Service;
+using static WindowsFormsApp1.Helper.Constain;
 
 namespace WindowsFormsApp1.Module
 {
@@ -43,7 +44,34 @@ namespace WindowsFormsApp1.Module
            
             bool result = UserService.addUser(user);
 
+            foreach(object itemChecked in checkedListBox1.CheckedItems)
+            {
+                DataRowView castedItem = itemChecked as DataRowView;
+                string comapnyName = castedItem["CompanyName"].ToString();
+                int id = Convert.ToInt32(castedItem["Id"]);
+            }
+
+
+            if (result )
+            {
+                MessageBox.Show("Thay đổi thành công");
+            }
+            else
+            {
+                MessageBox.Show("Thay đổi thất bại");
+            }
+
         }
+
+       void initData()
+        {
+            DataTable table = RoleService.getAllRole();
+            checkedListBox1.DataSource = table;
+            checkedListBox1.DisplayMember = "sName";
+            checkedListBox1.ValueMember = "Id";
+
+        }
+
 
         private void label3_Click(object sender, EventArgs e)
         {
@@ -128,6 +156,23 @@ namespace WindowsFormsApp1.Module
         private void txtpass_TextChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void ThemNhanVien_Load(object sender, EventArgs e)
+        {
+            initData();
+        }
+
+        private void dtgallquyen_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void dtgallquyen_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            
+
+            
         }
     }
 }

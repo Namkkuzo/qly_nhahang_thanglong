@@ -29,7 +29,6 @@ namespace WindowsFormsApp1.Module
         /// </summary>
         private void InitializeComponent()
         {
-            this.btnThemQuyen = new System.Windows.Forms.Button();
             this.txtAddress = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.txtCMND = new System.Windows.Forms.TextBox();
@@ -47,18 +46,9 @@ namespace WindowsFormsApp1.Module
             this.txtQuanly = new System.Windows.Forms.Label();
             this.btnHuy = new System.Windows.Forms.Button();
             this.btnsua = new System.Windows.Forms.Button();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.label5 = new System.Windows.Forms.Label();
             this.SuspendLayout();
-            // 
-            // btnThemQuyen
-            // 
-            this.btnThemQuyen.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btnThemQuyen.Location = new System.Drawing.Point(183, 344);
-            this.btnThemQuyen.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.btnThemQuyen.Name = "btnThemQuyen";
-            this.btnThemQuyen.Size = new System.Drawing.Size(126, 26);
-            this.btnThemQuyen.TabIndex = 80;
-            this.btnThemQuyen.Text = "Thêm quyền";
-            this.btnThemQuyen.UseVisualStyleBackColor = false;
             // 
             // txtAddress
             // 
@@ -220,12 +210,31 @@ namespace WindowsFormsApp1.Module
             this.btnsua.UseVisualStyleBackColor = false;
             this.btnsua.Click += new System.EventHandler(this.btnsua_Click);
             // 
+            // comboBox1
+            // 
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Location = new System.Drawing.Point(164, 304);
+            this.comboBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(191, 24);
+            this.comboBox1.TabIndex = 81;
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(49, 307);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(49, 17);
+            this.label5.TabIndex = 80;
+            this.label5.Text = "Vai trò";
+            // 
             // SuaNhanVien
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.btnThemQuyen);
+            this.Controls.Add(this.comboBox1);
+            this.Controls.Add(this.label5);
             this.Controls.Add(this.txtAddress);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.txtCMND);
@@ -245,13 +254,13 @@ namespace WindowsFormsApp1.Module
             this.Controls.Add(this.btnsua);
             this.Name = "SuaNhanVien";
             this.Text = "SuaNhanVien";
+            this.Load += new System.EventHandler(this.SuaNhanVien_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
         }
 
         #endregion
-        private System.Windows.Forms.Button btnThemQuyen;
         private System.Windows.Forms.TextBox txtAddress;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.TextBox txtCMND;
@@ -269,5 +278,7 @@ namespace WindowsFormsApp1.Module
         private System.Windows.Forms.Label txtQuanly;
         private System.Windows.Forms.Button btnHuy;
         private System.Windows.Forms.Button btnsua;
+        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.Label label5;
     }
 }

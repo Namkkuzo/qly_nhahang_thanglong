@@ -41,6 +41,14 @@ namespace WindowsFormsApp1
             this.txtSDT = new System.Windows.Forms.TextBox();
             this.dtNgS = new System.Windows.Forms.DateTimePicker();
             this.dtgNV = new System.Windows.Forms.DataGridView();
+            this.Id = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.sFullName = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.bGender = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dDateOfBirth = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.sPhone = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.sPassportNumber = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.email = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.sAddress = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.btnsua = new System.Windows.Forms.Button();
             this.btntim = new System.Windows.Forms.Button();
             this.btnReset = new System.Windows.Forms.Button();
@@ -52,14 +60,6 @@ namespace WindowsFormsApp1
             this.label4 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.ht = new System.Windows.Forms.Label();
-            this.Id = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.sFullName = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.bGender = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dDateOfBirth = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.sPhone = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.sPassportNumber = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.email = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.sAddress = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.btnThem = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dtgNV)).BeginInit();
             this.SuspendLayout();
@@ -179,6 +179,82 @@ namespace WindowsFormsApp1
             this.dtgNV.Size = new System.Drawing.Size(1328, 363);
             this.dtgNV.TabIndex = 17;
             this.dtgNV.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dtgNV_CellClick);
+            this.dtgNV.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dtgNV_CellContentClick);
+            // 
+            // Id
+            // 
+            this.Id.DataPropertyName = "Id";
+            this.Id.Frozen = true;
+            this.Id.HeaderText = "Mã nhân viên";
+            this.Id.MinimumWidth = 6;
+            this.Id.Name = "Id";
+            this.Id.Width = 125;
+            // 
+            // sFullName
+            // 
+            this.sFullName.DataPropertyName = "sFullName";
+            this.sFullName.Frozen = true;
+            this.sFullName.HeaderText = "Họ tên";
+            this.sFullName.MinimumWidth = 6;
+            this.sFullName.Name = "sFullName";
+            this.sFullName.Width = 125;
+            // 
+            // bGender
+            // 
+            this.bGender.DataPropertyName = "bGender";
+            this.bGender.Frozen = true;
+            this.bGender.HeaderText = "Giới tính";
+            this.bGender.MinimumWidth = 6;
+            this.bGender.Name = "bGender";
+            this.bGender.Width = 80;
+            // 
+            // dDateOfBirth
+            // 
+            this.dDateOfBirth.DataPropertyName = "dDateOfBirth";
+            dataGridViewCellStyle1.Format = "d";
+            dataGridViewCellStyle1.NullValue = null;
+            this.dDateOfBirth.DefaultCellStyle = dataGridViewCellStyle1;
+            this.dDateOfBirth.Frozen = true;
+            this.dDateOfBirth.HeaderText = "Ngày Sinh";
+            this.dDateOfBirth.MinimumWidth = 6;
+            this.dDateOfBirth.Name = "dDateOfBirth";
+            this.dDateOfBirth.Width = 125;
+            // 
+            // sPhone
+            // 
+            this.sPhone.DataPropertyName = "sPhone";
+            this.sPhone.Frozen = true;
+            this.sPhone.HeaderText = "Số Điện Thoại";
+            this.sPhone.MinimumWidth = 6;
+            this.sPhone.Name = "sPhone";
+            this.sPhone.Width = 125;
+            // 
+            // sPassportNumber
+            // 
+            this.sPassportNumber.DataPropertyName = "sPassportNumber";
+            this.sPassportNumber.Frozen = true;
+            this.sPassportNumber.HeaderText = "CMND";
+            this.sPassportNumber.MinimumWidth = 6;
+            this.sPassportNumber.Name = "sPassportNumber";
+            this.sPassportNumber.Width = 125;
+            // 
+            // email
+            // 
+            this.email.DataPropertyName = "email";
+            this.email.Frozen = true;
+            this.email.HeaderText = "Email";
+            this.email.MinimumWidth = 6;
+            this.email.Name = "email";
+            this.email.Width = 125;
+            // 
+            // sAddress
+            // 
+            this.sAddress.DataPropertyName = "sAddress";
+            this.sAddress.Frozen = true;
+            this.sAddress.HeaderText = "Address";
+            this.sAddress.MinimumWidth = 6;
+            this.sAddress.Name = "sAddress";
+            this.sAddress.Width = 125;
             // 
             // btnsua
             // 
@@ -291,80 +367,6 @@ namespace WindowsFormsApp1
             this.ht.TabIndex = 2;
             this.ht.Text = "Họ tên";
             this.ht.Click += new System.EventHandler(this.ht_Click);
-            // 
-            // Id
-            // 
-            this.Id.DataPropertyName = "Id";
-            this.Id.Frozen = true;
-            this.Id.HeaderText = "Mã nhân viên";
-            this.Id.MinimumWidth = 6;
-            this.Id.Name = "Id";
-            // 
-            // sFullName
-            // 
-            this.sFullName.DataPropertyName = "sFullName";
-            this.sFullName.Frozen = true;
-            this.sFullName.HeaderText = "Họ tên";
-            this.sFullName.MinimumWidth = 6;
-            this.sFullName.Name = "sFullName";
-            this.sFullName.Width = 125;
-            // 
-            // bGender
-            // 
-            this.bGender.DataPropertyName = "bGender";
-            this.bGender.Frozen = true;
-            this.bGender.HeaderText = "Giới tính";
-            this.bGender.MinimumWidth = 6;
-            this.bGender.Name = "bGender";
-            this.bGender.Width = 80;
-            // 
-            // dDateOfBirth
-            // 
-            this.dDateOfBirth.DataPropertyName = "dDateOfBirth";
-            dataGridViewCellStyle1.Format = "d";
-            dataGridViewCellStyle1.NullValue = null;
-            this.dDateOfBirth.DefaultCellStyle = dataGridViewCellStyle1;
-            this.dDateOfBirth.Frozen = true;
-            this.dDateOfBirth.HeaderText = "Ngày Sinh";
-            this.dDateOfBirth.MinimumWidth = 6;
-            this.dDateOfBirth.Name = "dDateOfBirth";
-            this.dDateOfBirth.Width = 125;
-            // 
-            // sPhone
-            // 
-            this.sPhone.DataPropertyName = "sPhone";
-            this.sPhone.Frozen = true;
-            this.sPhone.HeaderText = "Số Điện Thoại";
-            this.sPhone.MinimumWidth = 6;
-            this.sPhone.Name = "sPhone";
-            this.sPhone.Width = 125;
-            // 
-            // sPassportNumber
-            // 
-            this.sPassportNumber.DataPropertyName = "sPassportNumber";
-            this.sPassportNumber.Frozen = true;
-            this.sPassportNumber.HeaderText = "CMND";
-            this.sPassportNumber.MinimumWidth = 6;
-            this.sPassportNumber.Name = "sPassportNumber";
-            this.sPassportNumber.Width = 125;
-            // 
-            // email
-            // 
-            this.email.DataPropertyName = "email";
-            this.email.Frozen = true;
-            this.email.HeaderText = "Email";
-            this.email.MinimumWidth = 6;
-            this.email.Name = "email";
-            this.email.Width = 125;
-            // 
-            // sAddress
-            // 
-            this.sAddress.DataPropertyName = "sAddress";
-            this.sAddress.Frozen = true;
-            this.sAddress.HeaderText = "Address";
-            this.sAddress.MinimumWidth = 6;
-            this.sAddress.Name = "sAddress";
-            this.sAddress.Width = 125;
             // 
             // btnThem
             // 

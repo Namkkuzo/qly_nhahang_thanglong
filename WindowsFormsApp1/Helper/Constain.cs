@@ -12,22 +12,25 @@ namespace WindowsFormsApp1.Helper
         public static String connectingString = @"Data Source=DESKTOP-DQ1BOMO\SQLEXPRESS;Initial Catalog=Foody;Integrated Security=True";
         public enum Role
         {
-            DANG_NHAP,
-            XEM_DANH_SACH_NHAN_VIEN,
+            HR,
+            NHA_BEP,
+            THU_NGAN,
+            NO_ROLE
         };
         public enum statusOrder
         {
             CHUA_NAU,
             DANG_NAU,
-            DA_NAU_XONG,
+            DA_NAU_XONG
         };
         public static Role? getRoleByString (String role)
         {
             switch (role)
             {
-                case "DANG_NHAP": return Role.DANG_NHAP;
-                case "XEM_DANH_SACH_NHAN_VIEN": return Role.XEM_DANH_SACH_NHAN_VIEN;
-                default: return null;
+                case "HR": return Role.HR;
+                case "NHA_BEP": return Role.NHA_BEP;
+                case "THU_NGAN": return Role.THU_NGAN;
+                default: return Role.NO_ROLE;
             }
         }
 

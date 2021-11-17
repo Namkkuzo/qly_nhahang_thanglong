@@ -116,6 +116,7 @@
     <Compile Include="Service\BillService.cs" />
     <Compile Include="Service\FoodService.cs" />
     <Compile Include="Service\LoginService.cs" />
+    <Compile Include="Service\RoleService.cs" />
     <Compile Include="Service\UserService.cs" />
     <EmbeddedResource Include="Module\BillView.resx">
       <DependentUpon>BillView.cs</DependentUpon>
